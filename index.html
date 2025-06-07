@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Para o meu amor 💖</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Feliz Dia dos Namorados 💘</h1>
+
+    <div class="historia">
+      <p>A nossa história não começou ontem. A gente se conheceu ainda na escola, quando tudo era mais simples — mas mesmo naquela época, eu já sentia algo em você.</p>
+
+      <p>A gente já se perdeu no caminho algumas vezes, se afastou, teve momentos difíceis... mas também teve reencontros que mostraram que o sentimento ainda tava ali. Forte. Real.</p>
+
+      <p>Hoje, mesmo com pensamentos que às vezes batem de frente, eu sinto que a gente continua crescendo. Juntos.</p>
+
+      <p>Sei que sua vida anda corrida, que você se desdobra entre o trabalho e as tarefas de casa, e mesmo assim, você sempre dá um jeito de estar presente.</p>
+
+      <p>Nossas viagens de moto, o vento no rosto, a praia, as risadas e perrengues no caminho... são essas lembranças que me mostram que o amor mora nos detalhes.</p>
+
+      <p>Hoje, no Dia dos Namorados, eu só queria te lembrar o quanto você é especial pra mim.<br>
+      Obrigado por não desistir da gente.<br>
+      Que venham muitos outros capítulos dessa história maluca e linda que é só nossa.</p>
+
+      <p><strong>Te amo. 💖</strong></p>
+    </div>
+
+    <div class="carrossel">
+      <img src="images/01.jpg" class="foto ativa" alt="Foto 1">
+      <img src="images/02.jpg" class="foto" alt="Foto 2">
+      <img src="images/03.jpg" class="foto" alt="Foto 3">
+        <img src="images/04.jpg" class="foto" alt="Foto 4">
+        <img src="images/05.jpg" class="foto" alt="Foto 5">
+        <img src="images/06.jpg" class="foto" alt="Foto 6">
+        <img src="images/07.jpg" class="foto" alt="Foto 7">
+        <img src="images/08.jpg" class="foto" alt="Foto 8">
+        <img src="images/09.jpg" class="foto" alt="Foto 9">
+        <img src="images/10.jpg" class="foto" alt="Foto 10">
+        <img src="images/11.jpg" class="foto" alt="Foto 11">
+        <img src="images/12.jpg" class="foto" alt="Foto 12">
+     
+      <!-- Adicione mais imagens se quiser -->
+    </div>
+  </div>
+
+  <audio autoplay loop>
+    <source src="musica/musica.mp3" type="audio/mpeg">
+    Seu navegador não suporta áudio :(
+  </audio>
+
+  <script src="script.js"></script>
+  <script>
+  window.addEventListener('DOMContentLoaded', () => {
+    const musica = document.getElementById('musica');
+
+    // Tenta reproduzir automaticamente (alguns navegadores exigem interação do usuário)
+    const tocarMusica = () => {
+      musica.play().catch(() => {
+        // Caso o navegador bloqueie, aguarda o primeiro clique
+        document.body.addEventListener('click', () => {
+          musica.play();
+        }, { once: true });
+      });
+    };
+
+    tocarMusica();
+  });
+</script>
+
+</body>
+</html>

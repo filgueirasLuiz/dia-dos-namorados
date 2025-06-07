@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #ffe6eb, #fff);
+  font-family: 'Open Sans', sans-serif;
+  color: #4a4a4a;
+  text-align: center;
+}
+
+
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  min-height: 100vh; /* altura total da tela */
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+
+h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3em;
+  color: #d63384;
+  margin-bottom: 30px;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+.historia {
+  background: rgba(255, 255, 255, 0.6); /* branco com 75% de opacidade */
+  color: #111;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+  font-size: 1.1em;
+  line-height: 1.6;
+  min-width: 300px;
+  max-width: 550px;
+  text-align: center;
+}
+
+
+.historia p {
+  margin-bottom: 20px;
+}
+
+.carrossel {
+  flex: 1 1 400px;
+  position: relative;
+  height: 400px;
+  max-width: 500px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 3px rgba(0, 0, 0, 0.4);
+}
+
+
+.foto {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  max-height: 100%;
+  max-width: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  border-radius: 20px;
+}
+
+.foto.ativa {
+  opacity: 1;
+  z-index: 1;
+}
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/01.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+}
+@media (max-width: 768px) {
+  .container-flex {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .historia, .carrossel {
+    max-width: 100%;
+  }
+}
